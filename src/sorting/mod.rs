@@ -19,7 +19,7 @@ where
     match a.len() == b.len() {
         true => {
             // This is O(n^2) but performs better on smaller data sizes
-            //b.iter().all(|item| a.contains(item))
+            // b.iter().all(|item| a.contains(item))
 
             // This is O(n), performs well on larger data sizes
             let set_a: HashSet<&T> = a.iter().collect();
