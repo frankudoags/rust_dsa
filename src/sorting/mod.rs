@@ -1,13 +1,16 @@
 pub mod bubble_sort;
 pub mod selection_sort;
+pub mod insertion_sort;
 
-pub use self::bubble_sort::bubble_sort;
+// pub use self::bubble_sort::bubble_sort;
 pub use self::selection_sort::selection_sort;
+pub use self::insertion_sort::insertion_sort;
 
 #[cfg(test)]
 use std::cmp;
 
 #[cfg(test)]
+// Helper function to check if two slices have the same elements
 pub fn have_same_elements<T>(a: &[T], b: &[T]) -> bool
 where
     // T: cmp::PartialOrd,
@@ -31,6 +34,7 @@ where
 }
 
 #[cfg(test)]
+// Helper function to check if a slice is sorted
 pub fn is_sorted<T>(arr: &[T]) -> bool
 where
     T: cmp::PartialOrd,
